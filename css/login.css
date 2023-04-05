@@ -1,0 +1,97 @@
+@import url('https://fonts.cdnfonts.com/css/klill');
+
+@import url('https://fonts.cdnfonts.com/css/soria');
+
+
+* {
+    font-family: 'Soria', sans-serif !important;
+}
+
+body{
+    overflow: hidden;
+    background-color: RGB(19, 18, 25);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.3rem;
+    padding-top: 10vh;
+    transform: translateY(0);
+    transition: transform 700ms ease-out;
+    height: 100%;
+    justify-content: center;
+}
+
+#titulo {
+    font-size: 1.6rem;
+    opacity: 0;
+    transition: opacity 500ms, top 1s;
+    cursor: default;
+    color: white;
+    position: absolute;
+    top: 50vh;
+}
+
+#clique {
+    font-size: .8rem;
+    opacity: 0;
+    transition: opacity 500ms;
+    cursor: default;
+    position: absolute;
+    top: 55vh;
+    color: white;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 4px;
+    align-self: center;
+    opacity: 0;
+    transition: opacity 500ms;
+    box-shadow: .2rem .2rem 0 0 white;
+    background-color: white;
+}
+
+.form-login #user {
+    font-size: 1rem;
+    text-align: center;
+    cursor: default;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+.form-login #submit {
+    font-size: 1rem;
+    border-radius: 3px;
+    padding: 3px;
+    transition: background-color .2s;
+    /*background-color: #1ea6ef;*/
+    background-color: RGB(59, 58, 80);
+    color: white;
+    border: none;
+}
+
+#submit:hover{ 
+   /* background-color: #1e52ef;*/
+   background-color: RGB(28, 30, 31);
+}
+
+.form-login img{
+    width: 15rem;
+    overflow: hidden;
+    
+}
+
