@@ -19,7 +19,7 @@ body{
     align-items: center;
 }
 
-.login {
+.main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,6 +28,7 @@ body{
     transform: translateY(0);
     transition: transform 700ms ease-out;
     height: 100%;
+    width: 100%;
     justify-content: center;
 }
 
@@ -54,15 +55,17 @@ body{
 .form-login {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
     padding: 1rem;
     gap: 1rem;
     border-radius: 4px;
     align-self: center;
     opacity: 0;
     transition: opacity 500ms;
-    box-shadow: .2rem .2rem 0 0 white;
     background-color: white;
+    width: 16rem;
+    height: 17rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-login #user {
@@ -76,22 +79,49 @@ body{
 .form-login #submit {
     font-size: 1rem;
     border-radius: 3px;
-    padding: 3px;
+    padding: 8px;
     transition: background-color .2s;
-    /*background-color: #1ea6ef;*/
     background-color: RGB(59, 58, 80);
     color: white;
     border: none;
 }
 
 #submit:hover{ 
-   /* background-color: #1e52ef;*/
    background-color: RGB(28, 30, 31);
 }
 
 .form-login img{
     width: 15rem;
     overflow: hidden;
-    
 }
 
+.toGame {
+    width: 50%;
+    height: 90%;
+    transition:
+    width 1300ms,
+    height 1300ms;
+}
+
+.Game{
+    padding: 1rem;
+    background-color: white;
+    width: 50%;
+    height: 90%;
+}
+
+.card{
+    display: none;
+    background-color: #aaa;
+    width: 10rem;
+}
+
+.cards{
+    display: none;
+    grid-template-columns: repeat(5, 0.1fr);
+    gap: 1rem;
+    height: 100%;
+    width: 100%;
+    display: none;
+    justify-content: center;
+}
