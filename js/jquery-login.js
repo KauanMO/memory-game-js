@@ -10,7 +10,11 @@ $(document).ready(() => {
   $(document).one("click", () => {
     $("#clique").css("opacity", "0");
     setTimeout(() => {
-      $("#titulo").css("top", "30vh");
+      if($(window).width() <= 425 && $(window).width() >= 320){
+        $("#titulo").css("top", "25vh");
+      }else{
+        $("#titulo").css("top", "30vh");
+      }
     }, 400);
 
     setTimeout(() => {

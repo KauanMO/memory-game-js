@@ -154,10 +154,28 @@ body {
     .cards{
         display: none;
     }
+
+    .toGame {
+        width: 90%;
+        height: 75%;
+        transition:
+            width 1300ms,
+            height 1300ms;
+    }
 }
 
-@media (min-width: 310px) and (max-width: 435px) and (orientation: landscape){
-    #vire-tela{
-        opacity: 0;
+@media (min-height: 310px) and (max-height: 435px) and (orientation: landscape){
+    .Game{
+        width: 75%;
+        height: fit-content;
+        margin-top: 14rem;
+    }
+
+    .card{
+        height: 6.5rem;
+    }
+
+    body{
+        overflow-y: scroll;
     }
 }
