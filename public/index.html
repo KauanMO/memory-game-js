@@ -5,24 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="../js/jquery.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="../js/jquery-login.js"></script>
+    <script src="../js/script.js" defer></script>
+    <link rel="shortcut icon" href="../assets/nerd.webp" type="image/x-icon">
     <title>Jogo da memória</title>
 </head>
 
 <body>
     <section>
         <div class="container">
-            <div class="login">
+            <div class="main">
+                <span id="jogo-acabado">Você venceu!</span>
+                <span id="tempo">Tempo:</span>
+                <span id="vire-tela">Vire a tela para jogar</span>
                 <span id="titulo">Jogo da memória</span>
                 <span id="clique">Clique em qualquer lugar</span>
-                    <form action="" class="form-login">
-                        <img src="../assets/emote.png">
-                        <input type="text" id="user" placeholder="User" name="user" autocomplete="off">
-                        <input type="submit" id="submit" value="Jogar">
-                    </form>
+                    <div class="form-login" id="change">
+                        <img id='img-emote' src="../assets/emote.png">
+                        <input type="text" id="user" placeholder="Username" name="user" autocomplete="off">
+                        <button id="submit">
+                            Jogar
+                        </button>
+                        <div class="cards">
+                        </div>
+                    </div>
             </div>
         </div>
     </section>

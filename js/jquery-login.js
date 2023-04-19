@@ -32,7 +32,7 @@ $(document).ready(() => {
     $("#user").fadeOut("slow");
     setTimeout(() => {
       $("#titulo").css("top", "9vh");
-      $("#titulo").css("top", "10vh");
+      $("#titulo").css("top", "0.5vh");
       $("#change").addClass("toGame");
     }, 300)
 
@@ -41,7 +41,7 @@ $(document).ready(() => {
       $("#change").removeClass('toGame');
       $("#change").addClass("Game");
       $('.cards').css('display', 'grid');
-      $('.card').css('display', 'unset');
+      $('.card').css('opacity', '1');
 
       if ($(window).width() <= 425 && $(window).width() >= 320 && window.orientation == 0) {
         $('#vire-tela').css('opacity', '1')
