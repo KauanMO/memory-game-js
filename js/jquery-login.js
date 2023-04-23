@@ -54,6 +54,10 @@ $(document).ready(() => {
           }
         });
       }
+
+      $('#userName').html(user)
+      $('.timerUser').css('opacity', '1')
     }, 1500)
+    timerStart()
   });
 });

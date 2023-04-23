@@ -21,20 +21,39 @@ const createElement = (tag, className) => {
 
 let firstCard = '', secondCard = ''
 
+let t = document.getElementById('timer')
+
+function timerStart() {
+    var sec = 00
+    var min = 00
+    timer = setInterval(()=>{
+        if(sec == 60){
+            min++
+            sec = 0
+        }
+        t.innerHTML = `${min}:${sec}`;
+        sec++
+    }, 1000)
+    console.log(t)
+}
+
 const checkEnd = () => {
     const disabledCards = document.querySelectorAll('.disabled')
     const game = document.querySelector('.Game')
     const acabado = document.getElementById('jogo-acabado')
     const tempo = document.getElementById('tempo')
     const titulo = document.getElementById('titulo')
+    t = document.getElementById('timer')
 
     if (disabledCards.length === 20) {
         setTimeout(() => {
             game.style.opacity = '0'
+            t.style.opacity = '0'
             setTimeout(() => {
                 acabado.style.opacity = '1'
                 tempo.style.opacity = '1'
                 titulo.style.opacity = '0'
+                tempo.innerHTML = `Tempo: ${t.innerHTML}`
             }, 800);
         }, 800);
     }
@@ -107,7 +126,7 @@ const load = () => {
         const card = createCard(cardUnit)
 
         grid.appendChild(card)
-
+       
     })
 }
 
