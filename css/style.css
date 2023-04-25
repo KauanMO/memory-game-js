@@ -215,8 +215,16 @@ body {
 
 @media (max-width: 1366px) {
     .Game {
-        width: 40%;
+        width: 45%;
         height: 80%;
+    }
+
+    .toGame {
+        width: 45%;
+        height: 80%;
+        transition:
+            width 1300ms,
+            height 1300ms;
     }
 
     .card {
