@@ -12,6 +12,8 @@ $(document).ready(() => {
     setTimeout(() => {
       if($(window).width() <= 425 && $(window).width() >= 320){
         $("#titulo").css("top", "25vh");
+      } else if($(window).width() <= 1366){
+        $('#titulo').css('top', '20vh')
       }else{
         $("#titulo").css("top", "30vh");
       }
@@ -31,8 +33,11 @@ $(document).ready(() => {
     $("#submit").fadeOut("slow");
     $("#user").fadeOut("slow");
     setTimeout(() => {
-      $("#titulo").css("top", "9vh");
-      $("#titulo").css("top", "0.5vh");
+      if($(window).width() <= 1366){
+        $("#titulo").css("top", "2.5vh");  
+      }else{
+        $("#titulo").css("top", "0.5vh");
+      }
       $("#change").addClass("toGame");
     }, 300)
 
